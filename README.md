@@ -17,3 +17,15 @@ Puis dans le répertoire des 2 fichiers Python (pour lancer le serveur Python) :
 puis lancer le serveur :
 
 `python3 ./STK_input_server.py`
+
+
+
+
+Dans Processing :
+
+Sketch → Importer une librairie… → Rechercher `UDP` → Installer
+
+Puis lancer le script
+
+
+Puis donner le focus à la fenêtre de jeu Super Tux Kart
