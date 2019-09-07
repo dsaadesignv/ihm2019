@@ -114,6 +114,18 @@ La configuration est terminée 💪
 
 -----
 
+## Coder votre script
+
+
+
+Dans Processing :
+
+Sketch → Importer une librairie… → Rechercher `UDP` → Installer
+
+Puis lancer le script
+
+-----
+
 ## Démarrer la bidouille
 
 Une fois votre ordinateur configuré (étapes 1 et 2 de l'installation), le protocole de démarrage commence ici.
@@ -127,17 +139,33 @@ Le script-serveur est en place et fonctionnel. Il est donc prêt à recevoir des
 
 ### 2. Démarrer SuperTuxKart
 
-Double-cliquer sur l'application précédemment téléchargée *supertuxkart* et [suivre la procédure](#1.-installer-supertuxkart)
+Double-cliquer sur l'application précédemment téléchargée **`supertuxkart.app`** et [lancer le jeu](#1-installer-supertuxkart). Lancer une partie (solo ou en réseau) et dès que vous êtes sur la ligne de départ, ne faites rien (ou jouez un tour si vraiment vous avez envie) : l'objectif est d'être en mode jeu pour que les touches de clavier simulées se répercutent sur la conduite de votre kart (et pas sur les menus du jeu).
 
+### 3. Démarrer votre dispositif
 
-Dans Processing :
+- Vérifier que les capteurs soient bien branchés à votre carte Arduino
+- Vérifier que votre carte Arduino soit bien branchée à votre ordinateur en USB
 
-Sketch → Importer une librairie… → Rechercher `UDP` → Installer
+### 4. Démarrer votre script
 
-Puis lancer le script
+Selon votre projet, votre script peut être un script Processing ou un script NodeJS. Démarrer le script selon la méthode associée :
 
+- Processing : ouvrir le script dans l'IDE Processing, puis cliquer sur **▸** pour démarrer le script
+- NodeJS : ouvrir le Terminal, vous positionner dans le bon dossier (`cd ~/Desktop/ihm2019/teams/teamX/`) puis lancer le script (`node server.js`)
 
-Puis donner le focus à la fenêtre de jeu Super Tux Kart
+### 5. Aller dans SuperTuxKart
+
+Point très important : vous devez **toujours** avoir le focus dans la fenêtre de jeu SuperTuxKart. Puisque le script-serveur simule des touches de clavier, il les simule où que soit votre curseur. Autrement dit, si la fenêtre active est le Terminal au lieu du jeu, et que votre script-serveur simule la touche <kbd>N</kbd>, vous allez voir apparaître des _N_ dans votre Terminal.
+
+Donc cliquer sur la fenêtre de jeu SuperTuxKart et garder cette fenêtre active.
+
+### 6. 🏁 C'est parti 🏁
+
+Résumé de la situation : le jeu est lancé, le script-serveur est prêt à recevoir des instructions et à simuler des touches de clavier dans le jeu, votre dispositif est allumé et branché, et vous venez de démarrer votre script.
+
+Maintenant, si vous utilisez votre dispositif tel que vous l'avez conçu (secouer la bouteille, ouvrir la boîte d'allumette, etc), votre dispositif envoie une valeur de capteur à votre script, qui interprète cette valeur pour déduire l'action de jeu à effectuer, action de jeu que votre script envoie au script-serveur, pour que le script-serveur simule la touche de clavier correspondante.
+
+À vous de jouer !
 
 -----
 
