@@ -29,7 +29,7 @@ Vous allez coder un script capable de plusieurs choses :
 - Interpréter ces valeurs pour comprendre l'action de jeu à effectuer (accélérer, tourner à gauche, freiner…)
 - Envoyer l'action de jeu au script-serveur qui l'enverra à SuperTuxKart
 
-Développons : votre script va récupérer les valeurs de chaque capteur, et vous allez les labelliser. Par exemple, cette valeur est issu du capteur de lumière dans la boîte, et permet d'interpréter s'il faut activer la Nitro ou pas. On va donc donner un nom à la valeur du capteur, pour la manipuler plus facilement : on créera par exemple la variable `capteurNitro` qui aura pour valeur `1023` ou `0` selon si la boîte est ouverte ou fermée.  
+Développons : votre script va récupérer les valeurs de chaque capteur, et vous allez les labelliser. Par exemple, cette valeur est issue du capteur de lumière dans la boîte, et permet d'interpréter s'il faut activer la Nitro ou pas. On va donc donner un nom à la valeur du capteur, pour la manipuler plus facilement : on créera par exemple la variable `capteurNitro` qui aura pour valeur `1023` ou `0` selon si la boîte est ouverte ou fermée.  
 
 Ensuite, avec l'ensemble des valeurs labellisées issues des capteurs, vous allez définir la logique pour interpréter ces valeurs. Par exemple :
 - Si `capteurNitro = 1023`, alors on interprète que la boîte est ouverte, donc que nous souhaitons activer la Nitro dans le jeu
@@ -56,7 +56,7 @@ Du point de vue du jeu SuperTuxKart, un appui réel avec votre doigt sur la touc
 
 # Pour démarrer, configurons votre Mac
 
-_La procédure est dédiée à macOS et la démonstration du vendredi se déroulera sur un Mac, par souci de gain de temps. Si vous tenez à développer votre code sur Windows ou Linux, la procédure est sensiblement identique mais quelques subtilités peuvent exister avec l'installation de Python ou des autres outils à disposition._
+_La procédure est dédiée à macOS et la démonstration du vendredi se déroulera sur un Mac, par souci de gain de temps. Si vous tenez à développer votre code sur Windows ou Linux, la procédure est sensiblement identique mais quelques subtilités peuvent exister avec l'installation de Python ou d'autres outils nécessaires._
 
 ## 1. Installer SuperTuxKart
 Vous allez pouvoir tester le jeu et comprendre les commandes puis vous pourrez tester votre dispositif pour de vrai, en contrôlant votre kart.
@@ -75,7 +75,7 @@ Le jeu se lance.
 Vous êtes maintenant connecté à SuperTuxKart et vous êtes dans le menu principal.
 
 - Pour tester votre dispositif en solo, créer une partie en **Singleplayer** 
-- Pour tester votre dispositif avec une ou plusieurs autres équipes, aller dans : **Online ❯ Global Networking ❯ Find Server**, cocher **☑ Show Private Server** et trouver le serveur **`dsaadesignv`**. Ce serveur sera disponible chaque jour de la semaine (pendant les heures de travail). Si le serveur n'est pas listé, demander à Kévin 👍
+- Pour tester votre dispositif avec une ou plusieurs autres équipes, aller dans : **Online ❯ Global Networking ❯ Find Server**, cocher **☑ Show Private Server** et trouver le serveur **`dsaadesignv`**. Ce serveur sera disponible chaque jour de la semaine (pendant les heures de travail). Si le serveur n'est pas listé, demander à Kévin ou créer le vôtre 👍
 
 Vous savez maintenant lancer une partie de SuperTuxKart.
 
