@@ -1,4 +1,12 @@
-# ihm2019
+# Challenge IHM 2019
+[❯❯❯ Présentation du challenge](https://ihm2019.afihm.org/#challenge.html)
+
+## Sommaire
+
+- [Introduction : comment ça va fonctionner ?](#introduction--comment-ça-va-fonctionner-)
+- [Installation](#installation)
+- [Coder votre script](#coder-votre-script)
+- [Démarrer la bidouille](#démarrer-la-bidouille)
 
 ## Introduction : comment ça va fonctionner ?
 
