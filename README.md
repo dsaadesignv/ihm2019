@@ -32,29 +32,26 @@ Puis donner le focus à la fenêtre de jeu Super Tux Kart
 
 ## Liste des commandes 
 
-#### Commandes obligatoires
+### Commandes obligatoires
 
-`P_LEFT`	tourne le volant à gauche	appui sur la touche 'flèche gauche'
-`R_LEFT`	ramène le volant de la gauche	relâchement de la touche 'flèche gauche'
+| Commande | Description |
+| --- | --- |
+| **`P_LEFT`** | Tourne le volant à gauche<br>*Appui sur la touche* <kbd>←</kbd> |
+| **`R_LEFT`** | Ramène le volant de la gauche<br>*Relâchement de la touche* <kbd>←</kbd> |
+| **`P_RIGHT`** | Tourne le volant à droite<br>*Appui sur la touche* <kbd>→</kbd> |
+| **`R_RIGHT`** | Ramène le volant de la droite<br>*Relâchement de la touche* <kbd>→</kbd> |
+| **`P_ACCELERATE`** | Appuie sur l'accélérateur<br>*Appui sur la touche* <kbd>↑</kbd> |
+| **`R_ACCELERATE`** | Relâche l'accélérateur<br>*Relâchement de la touche* <kbd>↑</kbd> |
+| **`FIRE`** | Lance un objet<br>*Appui sur la touche* <kbd>Espace</kbd> |
+| **`RESCUE`** | Ramène le kart sur la piste (sauvetage par l'oiseau)<br>*Appui sur la touche* <kbd>Retour ⌫</kbd> |
 
-`P_RIGHT`	tourne le volant à droite	appui sur la touche 'flèche droite'
-`R_RIGHT`	ramène le volant de la droite	relâchement de la touche 'flèche droite'
+### Commandes optionnelles (mais utiles pour jouer)
 
-`P_ACCELERATE`	appuie sur l'accélérateur	appui sur la touche 'flèche haut'
-`R_ACCELERATE`	relâche l'accélérateur	relâchement de la touche 'flèche haut'
-
-`FIRE`	lance un objet	appui sur la touche 'espace'
-
-`RESCUE`	ramène le kart sur la piste (sauvetage par l'oiseau)	appui sur la touche 'retour'
-
-#### Commandes optionnelles (mais utiles pour jouer)
-
-`P_BRAKE`	appuie sur la pédale de frein / recule	appui sur la touche 'flèche bas'
-`R_BRAKE`	relâche la pédale de frein	relâchement de la touche 'flèche bas'
-
-`NITRO`	déclenche une forte accélération temporaire	appui sur la touche 'n'
-
-`SKIDDING`	déclenche un dérapage au cours d'un virage	appui sur la touche 'v'
-
-`P_LOOKBACK`	regarde en arrière	appui sur la touche 'b'
-`R_LOOKBACK`	revient à la vue standard	relâchement de la touche 'b'
+| Commande | Description |
+| --- | --- |
+| **`P_BRAKE`** | Appuie sur la pédale de frein (puis recule si l'appui est prolongé)<br>*Appui sur la touche* <kbd>↓</kbd> |
+| **`R_BRAKE`**	| Relâche la pédale de frein<br>*Relâchement de la touche* <kbd>↓</kbd> |
+| **`NITRO`** | Déclenche une forte accélération temporaire<br>*Appui sur la touche* <kbd>N</kbd> |
+| **`SKIDDING`** | Déclenche un dérapage au cours d'un virage<br>*Appui sur la touche* <kbd>V</kbd> |
+| **`P_LOOKBACK`** | Regarde en arrière<br>*Appui sur la touche* <kbd>B</kbd> |
+| **`R_LOOKBACK`** | Revient à la vue standard<br>*Relâchement de la touche* <kbd>B</kbd> |
