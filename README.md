@@ -1,6 +1,6 @@
 # ihm2019
 
-# Introduction : comment ça va fonctionner ?
+## Introduction : comment ça va fonctionner ?
 
 Vous avez un jeu (SuperTuxKart), un script-serveur et votre dispositif. 
 
@@ -54,11 +54,11 @@ Du point de vue du jeu SuperTuxKart, un appui réel avec votre doigt sur la touc
 
 -----
 
-# Pour démarrer, configurons votre Mac
+## Pour démarrer, configurons votre Mac
 
 _La procédure est dédiée à macOS et la démonstration du vendredi se déroulera sur un Mac, par souci de gain de temps. Si vous tenez à développer votre code sur Windows ou Linux, la procédure est sensiblement identique mais quelques subtilités peuvent exister avec l'installation de Python ou d'autres outils nécessaires._
 
-## 1. Installer SuperTuxKart
+### 1. Installer SuperTuxKart
 Vous allez pouvoir tester le jeu et comprendre les commandes puis vous pourrez tester votre dispositif pour de vrai, en contrôlant votre kart.
 
 1. Télécharger : http://iihm.imag.fr/ChallengeIHM19/install/mac-SuperTuxKart-ihm2019.zip
@@ -81,7 +81,7 @@ Vous savez maintenant lancer une partie de SuperTuxKart.
 
 Après avoir perdu une demie-heure à jouer au jeu, passons à la bidouille pour contrôler votre kart avec votre dispositif.
 
-## 2. Installer Python 3 (pour Mac)
+### 2. Installer Python 3 (pour Mac)
 → https://wsvincent.com/install-python3-mac/
 
 Puis dans le répertoire des 2 fichiers Python (pour lancer le serveur Python) :
@@ -103,6 +103,8 @@ Puis lancer le script
 
 
 Puis donner le focus à la fenêtre de jeu Super Tux Kart
+
+-----
 
 ## Liste des commandes 
 
