@@ -54,7 +54,7 @@ Du point de vue du jeu SuperTuxKart, un appui réel avec votre doigt sur la touc
 
 -----
 
-## Pour démarrer, configurons votre Mac
+## Installation
 
 _La procédure est dédiée à macOS et la démonstration du vendredi se déroulera sur un Mac, par souci de gain de temps. Si vous tenez à développer votre code sur Windows ou Linux, la procédure est sensiblement identique mais quelques subtilités peuvent exister avec l'installation de Python ou d'autres outils nécessaires._
 
@@ -81,18 +81,53 @@ Vous savez maintenant lancer une partie de SuperTuxKart.
 
 Après avoir perdu une demie-heure à jouer au jeu, passons à la bidouille pour contrôler votre kart avec votre dispositif.
 
-### 2. Installer Python 3 (pour Mac)
-→ https://wsvincent.com/install-python3-mac/
+### 2. Installer Python et les dépendances
 
-Puis dans le répertoire des 2 fichiers Python (pour lancer le serveur Python) :
+1. Ouvrir le **Terminal**
+2. Écrire cette ligne dans le Terminal puis <kbd>Entrée</kbd> pour installer le package Xcode : [(source)](https://wsvincent.com/install-python3-mac/)
+```
+xcode-select --install
+```
+3. Ensuite, installer Homebrew :
+```
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+4. Puis, installer Python 3 :
+```
+brew install python3
+```
+5. Maintenant, installer le module `keyboard` de Python (pour que le script-serveur puisse simuler les appuis des touches de clavier :
+```
+python3 -m pip install keyboard
+```
 
-`python3 -m pip install keyboard`
+### 3. Télécharger ce starter kit
 
-puis lancer le serveur :
+Kévin vous a préparé des bouts de code prêts à l'emploi pour démarrer en douceur, et a centralisé les fichiers nécessaires, notamment le fameux script-serveur fourni par le challenge.
 
-`python3 ./STK_input_server.py`
+Pour récupérer cela :
 
+1. En haut de cette page, cliquer sur le bouton vert **Clone or download** puis sur **Download ZIP**
+2. Décompresser le fichier .zip et placer le dossier `📁ihm2019` sur le Bureau du Mac
 
+La configuration est terminée 💪
+
+-----
+
+## Démarrer la bidouille
+
+Une fois votre ordinateur configuré (étapes 1 et 2 de l'installation), le protocole de démarrage commence ici.
+
+### 1. Démarrer le script-serveur
+
+1. Ouvrir le Terminal
+2. Taper `cd ~/Desktop/ihm2019/server && python3 ./STK_input_server.py` : après quelques secondes, ce message va apparaître _STK input server started_. Ne pas quitter la fenêtre du Terminal (vous pouvez bien sûr la réduire)
+
+Le script-serveur est en place et fonctionnel. Il est donc prêt à recevoir des instructions pour simuler les touches de clavier.
+
+### 2. Démarrer SuperTuxKart
+
+Double-cliquer sur l'application précédemment téléchargée *supertuxkart* et [suivre la procédure](#1.-installer-supertuxkart)
 
 
 Dans Processing :
