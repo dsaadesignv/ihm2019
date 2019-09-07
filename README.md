@@ -6,7 +6,30 @@ Vous avez un jeu (SuperTuxKart), un script-serveur et votre dispositif.
 
 Le jeu **SuperTuxKart** est une variante de Mario Kart, et est jouable avec un clavier classique. Votre but va être de bidouiller pour jouer avec votre dispositif plutôt qu'avec un clavier. Comment ? En simulant l'appui sur les touches jouables. Par exemple, si votre dispositif invite le joueur à secouer une bouteille pour accélérer, la secousse de la bouteille va simuler l'appui sur la touche <kbd>↑</kbd> qui permet d'accélérer dans le jeu.
 
-Pour ça, **un script-serveur** est fourni par le challenge IHM. Ce script-serveur a pour but de recevoir des signaux et de les convertir en appuis sur les touches de clavier. Par exemple, le signal "Secousse de bouteille" est reçu par le script-serveur, et ce script-serveur va envoyer "Appui sur la touche <kbd>↑</kbd>" au jeu SuperTuxKart.
+#### Qui simule l'appui sur la touche ?
+
+Pour remplir cette fonction, **un script-serveur** est fourni par le challenge IHM. Ce script-serveur a pour but de recevoir des messages et de les convertir en appuis sur les touches de clavier. Par exemple, le message généré par une secousse de bouteille est reçu par le script-serveur, et ce script-serveur va envoyer _"Appui sur la touche_ <kbd>↑</kbd>_"_ au jeu SuperTuxKart.
+
+#### Comment détecter les secousses de bouteille et autres interactions avec les objets ?
+
+Vous allez équiper vos objets de capteurs électroniques sensibles aux mouvements, gestes, percussions (…) donc capables de capter les interactions du joueur utilisant votre dispositif. Ces capteurs vont convertir une action (mouvement, geste, percussion) en une valeur numérique, et cette valeur numérique va vous permettre d'interpréter l'interaction initiale. 
+
+Par exemple, une boîte d'allumettes peut être ouverte ou fermée. Grâce à un capteur de lumière placé dans la boîte, le capteur est soit éclairé par la lumière ambiante si la boîte est ouverte, soit plongé dans l'obscurité de la boîte fermée. Le capteur va donc vous renvoyer une valeur numérique (disons `1023` s'il est éclairé, et `0` s'il est dans l'obscurité) et c'est à vous, humain, d'interpréter ce résultat (`1023` = capteur éclairé donc boîte ouverte ou `0` = capteur dans l'obscurité donc boîte fermée).
+
+#### Comment récupérer les valeurs numériques des capteurs ?
+
+Vos capteurs vont être reliés à une carte électronique qui va transférer les données émises par le capteur vers votre ordinateur. Un capteur envoie des valeurs à la carte électronique, et la carte électronique envoie ces valeurs à votre ordinateur. Pour l'exercice, nous utiliserons une carte **Arduino**, facile à utiliser.
+
+#### Qui récupère ces valeurs numériques sur l'ordinateur ? Et qu'est-ce qui fait qu'une valeur de capteur devient une action de jeu ?
+
+Vous allez coder un script capable de plusieurs choses :
+- Lire des valeurs envoyées depuis une carte électronique
+- Interpréter ces valeurs pour comprendre l'action de jeu à effectuer (accélérer, tourner à gauche, freiner…)
+- Envoyer l'action de jeu au script-serveur qui l'enverra à SuperTuxKart
+
+#### Comment envoyer les actions de jeu au jeu ?
+
+[❯❯❯ Introduction et codes d'exemple pour plonger dans Arduino et le monde des capteurs](https://github.com/dsaadesignv/arduino)
 
 # Pour démarrer, configurons votre Mac
 
