@@ -6,23 +6,23 @@ Vous avez un jeu (SuperTuxKart), un script-serveur et votre dispositif.
 
 Le jeu **SuperTuxKart** est une variante de Mario Kart, et est jouable avec un clavier classique. Votre but va être de bidouiller pour jouer avec votre dispositif plutôt qu'avec un clavier. Comment ? En simulant l'appui sur les touches jouables. Par exemple, si votre dispositif invite le joueur à secouer une bouteille pour accélérer, la secousse de la bouteille va simuler l'appui sur la touche <kbd>↑</kbd> qui permet d'accélérer dans le jeu.
 
-#### Qui simule l'appui sur la touche ?
+### Qui simule l'appui sur la touche ?
 
 Pour remplir cette fonction, **un script-serveur** est fourni par le challenge IHM. Ce script-serveur a pour but de recevoir des instructions et de les convertir en appuis sur les touches de clavier. Par exemple, l'instruction générée par une secousse de bouteille est reçue par le script-serveur, et ce script-serveur va simuler l'appui sur la touche <kbd>↑</kbd> dans le jeu SuperTuxKart.
 
-#### Comment détecter les secousses de bouteille et autres interactions avec les objets ?
+### Comment détecter les secousses de bouteille et autres interactions avec les objets ?
 
 Vous allez équiper vos objets de capteurs électroniques sensibles aux mouvements, gestes, percussions (…) donc capables de capter les interactions du joueur utilisant votre dispositif. Ces capteurs vont convertir une action (mouvement, geste, percussion) en une valeur numérique, et cette valeur numérique va vous permettre d'interpréter l'interaction initiale. 
 
 Par exemple, une boîte d'allumettes peut être ouverte ou fermée. Grâce à un capteur de lumière placé dans la boîte, le capteur est soit éclairé par la lumière ambiante si la boîte est ouverte, soit plongé dans l'obscurité de la boîte fermée. Le capteur va donc vous renvoyer une valeur numérique (disons `1023` s'il est éclairé, et `0` s'il est dans l'obscurité) et c'est à vous, humain, d'interpréter ce résultat (`1023` = capteur éclairé donc boîte ouverte ou `0` = capteur dans l'obscurité donc boîte fermée).
 
-#### Comment récupérer les valeurs numériques des capteurs ?
+### Comment récupérer les valeurs numériques des capteurs ?
 
 Vos capteurs vont être reliés à une carte électronique qui va transférer les données émises par le capteur vers votre ordinateur. Un capteur envoie des valeurs à la carte électronique, et la carte électronique envoie ces valeurs à votre ordinateur. Pour l'exercice, nous utiliserons une carte **Arduino**, facile à prendre en main pour découvrir l'électronique.
 
 [❯❯❯ Introduction et codes d'exemple pour plonger dans Arduino et le monde des capteurs](https://github.com/dsaadesignv/arduino)
 
-#### Qui récupère ces valeurs numériques sur l'ordinateur ? Et qu'est-ce qui fait qu'une valeur de capteur devient une action de jeu ?
+### Qui récupère ces valeurs numériques sur l'ordinateur ? Et qu'est-ce qui fait qu'une valeur de capteur devient une action de jeu ?
 
 Vous allez coder un script capable de plusieurs choses :
 - Lire des valeurs envoyées depuis une carte électronique
@@ -43,7 +43,7 @@ C'est donc votre rôle de comprendre les différentes valeurs possibles, et de d
 
 Une fois votre logique d'interprétation au point, vous avez donc un script qui définit les actions à effectuer dans le jeu en fonction des capteurs. Autrement dit, avec l'ensemble des valeurs des capteurs de votre dispositif, votre script est capable de déduire des actions de jeu à envoyer à SuperTuxKart. 
 
-#### Maintenant, comment envoyer les actions de jeu à SuperTuxKart ?
+### Maintenant, comment envoyer les actions de jeu à SuperTuxKart ?
 
 Souvenez-vous, on a parlé plus haut d'un _script-serveur_ ayant pour but de recevoir des instructions et de les convertir en appuis sur les touches de clavier : c'est à ce moment-là qu'il devient utile. 
 
@@ -79,7 +79,7 @@ Vous êtes maintenant connecté à SuperTuxKart et vous êtes dans le menu princ
 
 Vous savez maintenant lancer une partie de SuperTuxKart.
 
-Après avoir perdu une demie-heure à jouer au jeu, passons à la bidouille pour contrôler votre kart avec votre dispositif.
+Après avoir perdu une demie-heure à jouer au jeu, installons les dépendances.
 
 ### 2. Installer Python et les dépendances
 
@@ -115,8 +115,6 @@ La configuration est terminée 💪
 -----
 
 ## Coder votre script
-
-
 
 Dans Processing :
 
