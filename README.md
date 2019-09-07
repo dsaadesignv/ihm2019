@@ -1,6 +1,16 @@
 # ihm2019
 
-# Pour démarrer
+# Introduction : comment ça va fonctionner ?
+
+Vous avez un jeu (SuperTuxKart), un script-serveur et votre dispositif. 
+
+Le jeu **SuperTuxKart** est une variante de Mario Kart, et est jouable avec un clavier classique. Votre but va être de bidouiller pour jouer avec votre dispositif plutôt qu'avec un clavier. Comment ? En simulant l'appui sur les touches jouables. Par exemple, si votre dispositif invite le joueur à secouer une bouteille pour accélérer, la secousse de la bouteille va simuler l'appui sur la touche <kbd>↑</kbd> qui permet d'accélérer dans le jeu.
+
+Pour ça, **un script-serveur** est fourni par le challenge IHM. Ce script-serveur a pour but de recevoir des signaux et de les convertir en appuis sur les touches de clavier. Par exemple, le signal "Secousse de bouteille" est reçu par le script-serveur, et ce script-serveur va envoyer "Appui sur la touche <kbd>↑</kbd>" au jeu SuperTuxKart.
+
+# Pour démarrer, configurons votre Mac
+
+_La procédure est dédiée à macOS et la démonstration du vendredi se déroulera sur un Mac, par souci de gain de temps. Si vous tenez à développer votre code sur Windows ou Linux, la procédure est sensiblement identique mais quelques subtilités peuvent exister avec l'installation de Python ou des autres outils à disposition._
 
 ## 1. Installer SuperTuxKart
 Vous allez pouvoir tester le jeu et comprendre les commandes puis vous pourrez tester votre dispositif pour de vrai, en contrôlant votre kart.
@@ -21,7 +31,9 @@ Vous êtes maintenant connecté à SuperTuxKart et vous êtes dans le menu princ
 - Pour tester votre dispositif en solo, créer une partie en **Singleplayer** 
 - Pour tester votre dispositif avec une ou plusieurs autres équipes, aller dans : **Online ❯ Global Networking ❯ Find Server**, cocher **☑ Show Private Server** et trouver le serveur **`dsaadesignv`**. Ce serveur sera disponible chaque jour de la semaine (pendant les heures de travail). Si le serveur n'est pas listé, demander à Kévin 👍
 
-Vous savez maintenant lancer une partie de SuperTuxKart : passons à la bidouille pour contrôler votre kart avec votre dispositif.
+Vous savez maintenant lancer une partie de SuperTuxKart.
+
+Après avoir perdu une demie-heure à jouer au jeu, passons à la bidouille pour contrôler votre kart avec votre dispositif.
 
 ## 2. Installer Python 3 (pour Mac)
 → https://wsvincent.com/install-python3-mac/
