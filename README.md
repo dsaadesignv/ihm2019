@@ -9,3 +9,11 @@
 
 ## Installer Python 3 sur le Mac
 → https://wsvincent.com/install-python3-mac/
+
+Puis dans le répertoire des 2 fichiers Python (pour lancer le serveur Python) :
+
+`python3 -m pip install keyboard`
+
+puis lancer le serveur :
+
+`python3 ./STK_input_server.py`
