@@ -18,7 +18,7 @@ Par exemple, une boîte d'allumettes peut être ouverte ou fermée. Grâce à un
 
 #### Comment récupérer les valeurs numériques des capteurs ?
 
-Vos capteurs vont être reliés à une carte électronique qui va transférer les données émises par le capteur vers votre ordinateur. Un capteur envoie des valeurs à la carte électronique, et la carte électronique envoie ces valeurs à votre ordinateur. Pour l'exercice, nous utiliserons une carte **Arduino**, facile à utiliser.
+Vos capteurs vont être reliés à une carte électronique qui va transférer les données émises par le capteur vers votre ordinateur. Un capteur envoie des valeurs à la carte électronique, et la carte électronique envoie ces valeurs à votre ordinateur. Pour l'exercice, nous utiliserons une carte **Arduino**, facile à prendre en main pour découvrir l'électronique.
 
 #### Qui récupère ces valeurs numériques sur l'ordinateur ? Et qu'est-ce qui fait qu'une valeur de capteur devient une action de jeu ?
 
@@ -26,6 +26,17 @@ Vous allez coder un script capable de plusieurs choses :
 - Lire des valeurs envoyées depuis une carte électronique
 - Interpréter ces valeurs pour comprendre l'action de jeu à effectuer (accélérer, tourner à gauche, freiner…)
 - Envoyer l'action de jeu au script-serveur qui l'enverra à SuperTuxKart
+
+Développons : votre script va récupérer les valeurs de chaque capteur, et vous allez les labelliser. Par exemple, cette valeur est issu du capteur de lumière dans la boîte, et permet d'interpréter s'il faut activer la Nitro ou pas. On va donc donner un nom à la valeur du capteur, pour la manipuler plus facilement : on créera par exemple la variable `capteurNitro` qui aura pour valeur `1023` ou `0` selon si la boîte est ouverte ou fermée.  
+
+Ensuite, avec l'ensemble des valeurs labellisées issues des capteurs, vous allez définir la logique pour interpréter ces valeurs. Par exemple :
+- Si `capteurNitro = 1023`, alors on interprète que la boîte est ouverte, donc que nous souhaitons activer la Nitro dans le jeu
+- Si `capteurNitro = 0`, alors on interprète que la boîte est fermée, donc que nous n'activons pas la Nitro dans le jeu
+Certains capteurs ne renvoient pas que des valeurs binaires (une valeur parmi 2 choix) mais renvoient une valeur dans une plage plus grande. Par exemple, un capteur de lumière ne renvoit pas uniquement `0` ou `1023` mais peut renvoyer tous les nombres entre 0 et 1023 : `capteurNitro` peut donc valoir `71`, `116`, `450`, `890`, `1022`…
+
+C'est donc votre rôle de comprendre les différentes valeurs possibles, et de définir au mieux la logique d'interprétation des données. Si on affine notre exemple :
+- Si `capteurNitro < 100`, alors on interprète que la boîte est ouverte (car elle reçoit au moins un tout petit peu de lumière), donc que nous souhaitons activer la Nitro dans le jeu
+- Si `capteurNitro >= 100`, alors on interprète que la boîte n'est pas assez ouverte (car elle ne reçoit que très peu de lumière) ou est fermée, donc que nous n'activons pas la Nitro dans le jeu
 
 #### Comment envoyer les actions de jeu au jeu ?
 
