@@ -96,7 +96,7 @@ xcode-select --install
 ```
 brew install python3
 ```
-5. Maintenant, installer le module `keyboard` de Python (pour que le script-serveur puisse simuler les appuis des touches de clavier :
+5. Maintenant, installer le module `keyboard` de Python (pour que le script-serveur puisse simuler les appuis des touches de clavier) :
 ```
 python3 -m pip install keyboard
 ```
