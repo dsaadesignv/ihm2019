@@ -8,7 +8,7 @@ Le jeu **SuperTuxKart** est une variante de Mario Kart, et est jouable avec un c
 
 #### Qui simule l'appui sur la touche ?
 
-Pour remplir cette fonction, **un script-serveur** est fourni par le challenge IHM. Ce script-serveur a pour but de recevoir des messages et de les convertir en appuis sur les touches de clavier. Par exemple, le message généré par une secousse de bouteille est reçu par le script-serveur, et ce script-serveur va envoyer _"Appui sur la touche_ <kbd>↑</kbd>_"_ au jeu SuperTuxKart.
+Pour remplir cette fonction, **un script-serveur** est fourni par le challenge IHM. Ce script-serveur a pour but de recevoir des instructions et de les convertir en appuis sur les touches de clavier. Par exemple, l'instruction générée par une secousse de bouteille est reçue par le script-serveur, et ce script-serveur va simuler l'appui sur la touche <kbd>↑</kbd> dans le jeu SuperTuxKart.
 
 #### Comment détecter les secousses de bouteille et autres interactions avec les objets ?
 
@@ -19,6 +19,8 @@ Par exemple, une boîte d'allumettes peut être ouverte ou fermée. Grâce à un
 #### Comment récupérer les valeurs numériques des capteurs ?
 
 Vos capteurs vont être reliés à une carte électronique qui va transférer les données émises par le capteur vers votre ordinateur. Un capteur envoie des valeurs à la carte électronique, et la carte électronique envoie ces valeurs à votre ordinateur. Pour l'exercice, nous utiliserons une carte **Arduino**, facile à prendre en main pour découvrir l'électronique.
+
+[❯❯❯ Introduction et codes d'exemple pour plonger dans Arduino et le monde des capteurs](https://github.com/dsaadesignv/arduino)
 
 #### Qui récupère ces valeurs numériques sur l'ordinateur ? Et qu'est-ce qui fait qu'une valeur de capteur devient une action de jeu ?
 
@@ -32,15 +34,25 @@ Développons : votre script va récupérer les valeurs de chaque capteur, et vou
 Ensuite, avec l'ensemble des valeurs labellisées issues des capteurs, vous allez définir la logique pour interpréter ces valeurs. Par exemple :
 - Si `capteurNitro = 1023`, alors on interprète que la boîte est ouverte, donc que nous souhaitons activer la Nitro dans le jeu
 - Si `capteurNitro = 0`, alors on interprète que la boîte est fermée, donc que nous n'activons pas la Nitro dans le jeu
-Certains capteurs ne renvoient pas que des valeurs binaires (une valeur parmi 2 choix) mais renvoient une valeur dans une plage plus grande. Par exemple, un capteur de lumière ne renvoit pas uniquement `0` ou `1023` mais peut renvoyer tous les nombres entre 0 et 1023 : `capteurNitro` peut donc valoir `71`, `116`, `450`, `890`, `1022`…
 
-C'est donc votre rôle de comprendre les différentes valeurs possibles, et de définir au mieux la logique d'interprétation des données. Si on affine notre exemple :
-- Si `capteurNitro < 100`, alors on interprète que la boîte est ouverte (car elle reçoit au moins un tout petit peu de lumière), donc que nous souhaitons activer la Nitro dans le jeu
-- Si `capteurNitro >= 100`, alors on interprète que la boîte n'est pas assez ouverte (car elle ne reçoit que très peu de lumière) ou est fermée, donc que nous n'activons pas la Nitro dans le jeu
+Certains capteurs ne renvoient pas que des valeurs binaires (une valeur parmi 2 choix) mais renvoient une valeur dans une plage plus grande. Par exemple, un capteur de lumière ne renvoit pas uniquement `0` ou `1023` mais peut renvoyer tous les nombres entre 0 et 1023 : `capteurNitro` peut donc valoir `71`, `116`, `450`, `890`, `1022` selon la quantité de lumière reçue par le capteur.
 
-#### Comment envoyer les actions de jeu au jeu ?
+C'est donc votre rôle de comprendre les différentes valeurs possibles, et de définir au mieux la logique d'interprétation des données. Donc en affinant notre exemple :
+- Si `capteurNitro > 100`, alors on interprète que la boîte est ouverte (car elle reçoit au moins un tout petit peu de lumière), donc nous souhaitons activer la Nitro dans le jeu
+- Si `capteurNitro <= 100`, alors on interprète que la boîte n'est pas assez ouverte (car elle ne reçoit que très peu de lumière, la boîte est sûrement fermée) ou est fermée, donc nous n'activons pas la Nitro dans le jeu
 
-[❯❯❯ Introduction et codes d'exemple pour plonger dans Arduino et le monde des capteurs](https://github.com/dsaadesignv/arduino)
+Une fois votre logique d'interprétation au point, vous avez donc un script qui définit les actions à effectuer dans le jeu en fonction des capteurs. Autrement dit, avec l'ensemble des valeurs des capteurs de votre dispositif, votre script est capable de déduire des actions de jeu à envoyer à SuperTuxKart. 
+
+#### Maintenant, comment envoyer les actions de jeu à SuperTuxKart ?
+
+Souvenez-vous, on a parlé plus haut d'un _script-serveur_ ayant pour but de recevoir des instructions et de les convertir en appuis sur les touches de clavier : c'est à ce moment-là qu'il devient utile. 
+
+1. Votre script envoie des instructions à ce script-serveur, et va lui dire quelle action est souhaitée dans le jeu (accélérer, tourner à gauche…)
+2. Le script-serveur reçoit votre instruction, et simule l'appui sur la touche correspondant à l'action demandée
+
+Du point de vue du jeu SuperTuxKart, un appui réel avec votre doigt sur la touche <kbd>↑</kbd> ou un appui simulé par le script-serveur est identique : le kart accélère.
+
+-----
 
 # Pour démarrer, configurons votre Mac
 
