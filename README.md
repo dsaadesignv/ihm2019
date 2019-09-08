@@ -43,7 +43,7 @@ Ensuite, avec l'ensemble des valeurs labellisées issues des capteurs, vous alle
 - Si `capteurNitro = 1023`, alors on interprète que la boîte est ouverte, donc que nous souhaitons activer la Nitro dans le jeu
 - Si `capteurNitro = 0`, alors on interprète que la boîte est fermée, donc que nous n'activons pas la Nitro dans le jeu
 
-Certains capteurs ne renvoient pas que des valeurs binaires (une valeur parmi 2 choix) mais renvoient une valeur dans une plage plus grande. Par exemple, un capteur de lumière ne renvoit pas uniquement `0` ou `1023` mais peut renvoyer tous les nombres entre 0 et 1023 : `capteurNitro` peut donc valoir `71`, `116`, `450`, `890`, `1022` selon la quantité de lumière reçue par le capteur.
+Certains capteurs renvoient des valeurs binaires (une valeur parmi 2 choix : `vrai` ou `faux`, `0` ou `1`, etc) et d'autres renvoient une valeur comprise dans une plage de valeurs. Par exemple, un capteur de lumière ne renvoit pas uniquement `0` ou `1023` mais peut renvoyer tous les nombres entre 0 et 1023 : `capteurNitro` peut donc valoir `71`, `116`, `450`, `890`, `1022` selon la quantité de lumière reçue par le capteur.
 
 C'est donc votre rôle de comprendre les différentes valeurs possibles, et de définir au mieux la logique d'interprétation des données. Donc en affinant notre exemple :
 - Si `capteurNitro > 100`, alors on interprète que la boîte est ouverte (car elle reçoit au moins un tout petit peu de lumière), donc nous souhaitons activer la Nitro dans le jeu
