@@ -2,7 +2,7 @@
   
   01. Light sensor
   
-  Brancher le jumper sur la sortie A0 de la carte Arduino
+  Brancher le jumper sur la sortie A2 de la carte Arduino
   
 */
 
@@ -18,7 +18,7 @@ var board = new five.Board({});
 
 board.on("ready", function() {
   
-  var light = new five.Sensor("A0");
+  var light = new five.Sensor("A2");
 
   light.on("change", function(value) {
     console.log('Light sensor: '+value);
