@@ -1,5 +1,5 @@
 var five = require("johnny-five");
-var board = new five.Board({port:"/dev/tty.usbserial-14340"});
+var board = new five.Board({});
   
 var udp = require('dgram');
 var client = udp.createSocket('udp4');
@@ -14,7 +14,7 @@ board.on("ready", function() {
 
   potentiometer = new five.Sensor({
     pin: "A3",
-    freq: 250
+    freq: 50
   });
 
   potentiometer.on("data", function() {
