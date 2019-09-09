@@ -139,7 +139,8 @@ Une fois votre ordinateur configuré (étapes 1 et 2 de l'installation), le prot
 ### 1. Démarrer le script-serveur
 
 1. Ouvrir le Terminal
-2. Taper `cd ~/Desktop/ihm2019/server && python3 ./STK_input_server.py` : après quelques secondes, ce message va apparaître _STK input server started_. Ne pas quitter la fenêtre du Terminal (vous pouvez bien sûr la réduire)
+2. Taper `cd ` puis faire glisser votre dossier `📁ihm2019` sur la fenêtre du Terminal puis valider
+3. Taper `cd server && python3 ./STK_input_server.py` : après quelques secondes, ce message va apparaître _STK input server started_. Ne pas quitter la fenêtre du Terminal (vous pouvez bien sûr la réduire)
 
 Le script-serveur est en place et fonctionnel. Il est donc prêt à recevoir des instructions pour simuler les touches de clavier.
 
@@ -152,16 +153,19 @@ Double-cliquer sur l'application précédemment téléchargée **`supertuxkart.a
 - Vérifier que les capteurs soient bien branchés à votre carte Arduino
 - Vérifier que votre carte Arduino soit bien branchée à votre ordinateur en USB
 
+1. Ouvrir une nouvelle fenêtre de Terminal (bien garder la première fenêtre Terminal du script-serveur à côté)
+2. Lancer votre script : `cd emplacementdevotrescript` puis `node votrescript.js`
+
 ### 4. Démarrer votre script
 
 Selon votre projet, votre script peut être un script Processing ou un script NodeJS. Démarrer le script selon la méthode associée :
 
+- NodeJS : ouvrir le Terminal, vous positionner dans le bon dossier (`cd emplacementdevotrescript`) puis lancer le script (`node votrescript.js`)
 - Processing : ouvrir le script dans l'IDE Processing, puis cliquer sur **▸** pour démarrer le script
-- NodeJS : ouvrir le Terminal, vous positionner dans le bon dossier (`cd ~/Desktop/ihm2019/teams/teamX/`) puis lancer le script (`node server.js`)
 
 ### 5. Aller dans SuperTuxKart
 
-Point très important : vous devez **toujours** avoir le focus dans la fenêtre de jeu SuperTuxKart. Puisque le script-serveur simule des touches de clavier, il les simule où que soit votre curseur. Autrement dit, si la fenêtre active est le Terminal au lieu du jeu, et que votre script-serveur simule la touche <kbd>N</kbd>, vous allez voir apparaître des _N_ dans votre Terminal.
+À partir de maintenant, pour jouer, vous devez **toujours** avoir le focus dans la fenêtre de jeu SuperTuxKart. Puisque le script-serveur simule des touches de clavier, il les simule où que soit votre curseur. Autrement dit, si la fenêtre active est le Terminal au lieu du jeu, et que votre script-serveur simule la touche <kbd>N</kbd>, vous allez voir apparaître des _N_ dans votre Terminal.
 
 Donc cliquer sur la fenêtre de jeu SuperTuxKart et garder cette fenêtre active.
 

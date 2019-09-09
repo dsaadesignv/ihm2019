@@ -35,7 +35,7 @@ board.on("ready", function() {
   var light = new five.Sensor("A0");
 
   light.on("change", function(value) {
-    console.log('Light: '+value);
+    console.log('Light sensor: '+value);
   });
   
   
