@@ -60,9 +60,9 @@ Vous verrez s'afficher les valeurs de votre potentiomètre en direct. Prenez le 
 
 C'est normal si c'est chaotique, rassurez-vous.
 
-Pendant que votre ordinateur va s'entêter de simuler un appui sur une touche de clavier, vous allez devoir stopper l'exécution de votre script. Pour cela, cliquer dans la fenêtre de Terminal de votre script (pas la fenêtre du script-serveur qui continue de tourner en fond) et faire le raccourci <kbd>Ctrl</kbd> + <kbd>C</kbd> 2 fois de suite rapidement. Cela va arrêter votre script et stopper l'envoi d'instructions au script-serveur.
+Pendant que votre ordinateur va s'entêter à simuler un appui sur une touche de clavier, vous allez devoir stopper l'exécution de votre script. Pour cela, cliquer dans la fenêtre de Terminal de votre script (pas la fenêtre du script-serveur qui continue de tourner en fond) et faire le raccourci <kbd>Ctrl</kbd> + <kbd>C</kbd> 2 fois de suite rapidement. Cela va arrêter votre script et stopper l'envoi d'instructions au script-serveur.
 
-Ainsi, vous pouvez éditer votre script, modifier du code, enregistrer le fichier, et revenir dans le Terminal. 
+Ainsi, vous pouvez éditer votre script tranquillement, modifier du code si nécessaire, enregistrer le fichier, et revenir dans le Terminal. 
 
 Quand vous êtes prêt et que le jeu SuperTuxKart est prêt, retaper `node 02-potentiometer-drive.js` dans le Terminal et valider : votre script recommence à envoyer des instructions au script-serveur qui se remet à simuler l'appui sur les touches du clavier. Pensez bien à redonner le focus à la fenêtre de jeu SuperTuxKart pour que les touches appuyées contrôlent votre kart et pas une autre fenêtre du Mac.
 
