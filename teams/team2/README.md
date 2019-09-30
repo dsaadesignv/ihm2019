@@ -1,4 +1,4 @@
-# Écurie 2 : [nom de l'écurie] (@dsaadesignv)
+# Écurie 2 : [Classe de Neige] (@dsaadesignv)
 
 Étudiants de l'écurie : 
 
