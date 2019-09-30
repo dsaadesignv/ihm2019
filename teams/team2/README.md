@@ -2,7 +2,7 @@
 
 Étudiants de l'écurie : 
 
-- 
-- 
-- 
-- 
+- Anna	
+- Emma
+- Julie
+- Alexia
